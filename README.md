@@ -38,7 +38,7 @@ An interactive web application that allows users to experiment with different AI
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RohitBasantYadav/interactive-prompt-playground.git
    cd interactive-prompt-playground
    ```
 
