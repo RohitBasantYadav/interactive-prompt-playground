@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Prompt Playground</title>
+</head>
+<body>
+    <h1>Interactive Prompt Playground</h1>
+    <h3>Your personal product writer</h3>
+    <div id="container">
+        <form>
+            <input type="text" id="input" placeholder="Enter your prompt to get product description">
+            <label>Temperature
+            <select id="temperature">
+                <option value="0.1" selected>0.1</option>
+                <option value="0.7">0.7</option>
+                <option value="0.9">0.9</option>
+                <option value="1.2">1.2</option>
+                <option value="1.9">1.9</option>
+            </select>
+        </label>
+            <lable>Max-Token:
+            <select id="max_tokens">
+                <option value="50">50</option>
+                <option value="150">150</option>
+                <option value="300" selected>300</option>
+                <option value="400">400</option>
+            </select>
+        </lable>
+        <lable>Presence Penelty
+            <select id="presence_penelty">
+                <option value="0.1" selected>0.1</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.9">0.9</option>
+                <option value="1.5">1.5</option>
+            </select>
+        </lable>
+        <lable>Frequency Penelty
+            <select id="frequency_penalty" >
+                <option value="0.1" selected>0.1</option>
+                <option value="0.5">0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.9">0.9</option>
+                <option value="1.5">1.5</option>
+            </select>
+        </lable>
+            <input type="submit" value="Submit">
+        </form>
+
+    
+        <!-- Here you will display the respose from the Open AI -->
+        <div id="display">
+        </div>
+
+        <!-- Results Table -->
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Temperature</th>
+                    <th>Max Tokens</th>
+                    <th>Presence Penalty</th>
+                    <th>Frequency Penalty</th>
+                    <th>Response</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+            </tbody>
+        </table>
+
+        <!-- Reflection Section -->
+        <div class="reflection-section">
+            <h3>Response Analysis</h3>
+            <p id="reflection-text"></p>
+        </div>
+        
+    </div>
+</body>
+<script type="module" src="index.js"></script>
+</html>
